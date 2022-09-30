@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = "nguyen";
+    let str2 = "nguyenbahieu";
+
+    function checkString(str1,str2){
+        let check = false;
+        let len1 = str1.length;
+        let len2 = str2.length;
+        for (let i = 0; i < len2 - len1 + 1; i++){
+            let str3 = str2.slice(i,i + len1);
+            if (str1 == str3) {
+                check = true;
+                break;
+            }
+        }
+        return check;
+    }
+    console.log(checkString(str1,str2));
+</script>
+</body>
+</html>

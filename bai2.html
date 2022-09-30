@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    let Array = [32, 5, 23, 5, 756, 34, 35, 234, 32];
+
+    function tryRemoveFromArray(arr, index) {
+        let rel = []
+
+
+        if (index < 0 || index > arr.length) {
+            rel = arr;
+            return rel;
+        } else {
+            for (let i = 0; i < index; i++) {
+                rel[i] = arr[i];
+            }
+
+            for (let i = index + 1; i < arr.length; i++) {
+                rel[i] = arr[i];
+            }
+        }
+        return rel;
+    }
+
+
+    document.write(tryRemoveFromArray(Array, 3));
+
+
+</script>
+</body>
+</html>
